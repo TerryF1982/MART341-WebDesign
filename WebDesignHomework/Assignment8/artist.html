@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>artist.html</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('images/northernlights.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        .nav-header {
+            background-color: rgba(64, 86, 161, 0.9);
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+            border: 2px solid #d9b08c;
+            position: relative;
+        }
+
+        .nav-header .logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-header .nav-links {
+            display: flex;
+            gap: 15px;
+            position: absolute;
+            right: 20px;
+        }
+
+        .nav-header .nav-links-left {
+            display: flex;
+            gap: 15px;
+            position: absolute;
+            left: 20px;
+        }
+
+        .nav-header .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .nav-header .nav-links a:hover,
+        .nav-header .nav-links-left a:hover {
+            color: #ffcc00;
+        }
+
+        .nav-header .nav-links-left img {
+            height: 20px;
+            width: auto;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgba(64, 86, 161, 0.9);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border: 1px solid #d9b08c;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #d9b08c;
+            color: #4056a1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .section {
+            background: rgba(211, 211, 211, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+        }
+
+        .welcome-section {
+            display: flex;
+            margin: 40px 0;
+        }
+
+        .text-content {
+            flex: 2;
+            padding-right: 20px;
+        }
+
+        .image-content {
+            float: right;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            max-width: 40%;
+        }
+
+        .welcome-image {
+            flex: 1;
+            text-align: left;
+            margin-left: 20px;
+            margin-right: 20px; 
+        }
+
+        .caption {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            color: #ddd;
+            font-style: italic;
+        }
+
+        .image-content img,
+        .welcome-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image-content img {
+            margin-right: 10px;
+        }
+
+        .video-container {
+            max-width: 100%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: auto;
+            max-width: 560px;
+            aspect-ratio: 16/9;
+            border-radius: 10px;
+            border: 2px solid #d9b08c;
+        }
+
+        .main-content {
+            display: flex;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .main-content .text-content {
+            flex: 1;
+        }
+
+        .main-content .image-content {
+            flex: 0 0 auto;
+            max-width: 300px;
+            margin-left: auto;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #ddd;
+            padding: 10px;
+            text-align: center;
+            border-top: 2px solid #d9b08c;
+        }
+
+        @media (max-width: 768px) {
+            .welcome-section {
+                flex-direction: column;
+            }
+
+            .main-content {
+                flex-direction: column;
+            }
+
+            .text-content, .welcome-text {
+                padding: 0;
+            }
+
+            .image-content, .welcome-image {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+        <header class="nav-header">
+            <nav class="nav-links-left">
+                <a href="index.html" target="_blank">
+                    <img src="images/home.png" alt="Home">
+                </a>
+             
+                <div class="dropdown">
+                    <a href="#portfolio">Portfolio</a>
+                    <div class="dropdown-content">
+                        <a href="drawing.html">Drawing</a>
+                        <a href="digitalMedia.html">Digital Media</a>
+                        <a href="painting.html">Painting</a>
+                        <a href="photography.html">Photography</a>
+                        <a href="sculpture.html">Sculpture</a>
+                    </div>
+                </div>
+            </nav>
+            
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <nav class="nav-links">
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+    <main>
+        <section class="welcome-section section">
+            <div class="welcome-image">
+                <img src="images/me.jpg" alt="About Me">
+                <figcaption class="caption">A beautiful cutthroat trout caught on a fly in western Montana 2024</figcaption>
+            </div>
+            <div class="welcome-text text-content">
+                <h2>Introduction</h2>
+                <p>I am a non-traditional student at the <a href="https://www.umt.edu" target="_blank" style="color: #70002e;">University of Montana</a>. I am working toward both bachelor’s degrees in Art as well as another in Media Arts. I am currently a Junior (Fall 2024). I have a passion for the outdoors and spend my free time in the summer fly fishing around western Montana. I was born in Montana and grew up in a small town in central Montana. Despite starting in a small town, I have been around the world twice and have also lived all over the United States, from as far north as Prudhoe Bay, Alaska to the deep south in places like Louisiana and Georgia. Although my life and travels have taken me all over, <span style="color: #ffcc00;">Montana will always be home to me.</span></p>
+            </div>
+        </section>
+
+        <section class="main-content section">
+            <div class="text-content">
+                <h1>My Story and My Art</h1>
+                <p>
+                    <span style="color: #ffcc00;">I am a veteran who has served multiple combat deployments.</span> The adjustment to civilian life after my service wasn’t smooth or immediate; in fact, it took many years. After leaving the military, I retreated to the isolation of remote oilfields, avoiding crowds and the expectations of a society I no longer felt part of. I wasn’t capable of blending in, nor was I ready to confront the weight of my experiences head-on.
+                        Instead of seeking therapy or any of the more common methods for dealing with PTSD, I ran from it. I buried myself in work, in isolation, and in trying to forget the things I had seen and the things I had done. It was an act of survival, but not one that allowed me to heal. For a long time, I existed in a space where the past haunted me, and I felt disconnected from the world around me.
+                        That changed when I was introduced to art, specifically through painting. It was unexpected, but I found that art gave me a way to start processing all the emotions and memories that had been locked away for so long. The act of creating helped me channel feelings I couldn’t put into words, giving me an outlet that was both personal and therapeutic. It allowed me to face the things I had been running from without the need for explanation or justification. The canvas became a place where I could express my pain, my fears, and my perhaps my hopes.
+                        Art became more than just a hobby—it became a lifeline. As I continued to paint, I realized I had a desire to explore other mediums, particularly sculpture. I found that working with my hands, shaping materials into forms, connected me even more deeply to the process of healing. Through sculpture, I could communicate not only my own experiences but also the broader themes of identity, transformation, and resilience that have defined my journey.
+                        Art, for me, isn’t just about creating beautiful objects. It’s about survival, reflection, and growth. It’s a way of reclaiming a part of myself that had been lost during my years of service and isolation. Pursuing art now, at this stage in my life, feels like the culmination of a long and difficult journey—and one that is far from over.
+                    
+            </div>
+            <div class="image-content">
+                <img src="images/iraq.jpg" alt="My Art">
+            </div>
+        </section>
+
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/Jr48BH4ZoTE" 
+                frameborder="0" 
+                allowfullscreen>
+            </iframe>
+            <figcaption class="caption">Sculpture I made of steel rods and wire. The purple haze fly is one of my favorites... so I finally made one I can't lose on the river.</figcaption>
+        </div>
+        <hr>
+        <div class="audio-container">
+            <audio controls>
+                <source src="images/sound.wav" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <figcaption class="caption">Randomly selected music for assignment8</figcaption>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Terry Farrar | <span class="caption">Northern lights photographed October 2024 north of Missoula Montana.</span></p>
+    </footer>
+</body>
+</html>
