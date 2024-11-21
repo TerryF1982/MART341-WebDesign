@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terry Farrar - Paintings</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            background-image: url('images/background1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .nav-header {
+            background-color: #555166;
+            color: transparent;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Georgia', serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-header h1 {
+            margin: 0;
+            font-size: 3rem;
+            background: linear-gradient(90deg, #f25356, #ffcc00);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 3rem;
+            color: #f25356;
+            text-shadow: 3px 3px 5px #000000;
+            margin: 20px 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: auto;
+            padding: 20px 0;
+            margin: 0 15px;
+        }
+
+        .painting-container,
+        .step-materials-container,
+        .my-art-container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: rgba(155, 196, 194, 0.7);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            margin-bottom: 40px; /* Moved margin from individual sections to here */
+        }
+
+        .container img {
+            height: auto;
+            max-height: 200px;
+            margin: 0 10px;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .container img:hover {
+            transform: scale(1.05);
+        }
+
+        .step-row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            margin: 0 15px;
+            flex: 1;
+        }
+
+        .step-item img {
+            max-width: 150px;
+            margin-right: 10px;
+        }
+
+        .step-text {
+            text-align: left;
+            max-width: 300px;
+        }
+
+        .materials-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .material-category {
+            position: relative;
+            margin: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .category-image {
+            width: 150px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .popup-caption {
+            display: none;
+            position: absolute;
+            background-color: rgba(155, 196, 194, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            z-index: 1;
+            margin-top: 10px;
+            white-space: nowrap;
+        }
+
+        footer {
+            background-color: #555166;
+            color: #f25356;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #f25356;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+        }
+
+        .my-art-container .link-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .link-container a {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .link-container img {
+            width: 150px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .link-caption {
+            display: block;
+            margin-top: 5px;
+            color: #f25356;
+        }
+
+        .container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .container::-webkit-scrollbar-thumb {
+            background: #f25356;
+            border-radius: 10px;
+        }
+
+        .container::-webkit-scrollbar-track {
+            background: rgba(155, 196, 194, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="nav-header">
+        <h1>Terry Farrar-Paintings</h1>
+    </header>
+
+    <h2>Paintings</h2>
+    <div class="painting-container">
+        <div class="container">
+            <img src="images/painting1.jpg" alt="Painting 1">
+            <img src="images/painting2.jpeg" alt="Painting 2">
+            <img src="images/images.jpeg" alt="Painting 3">
+            <img src="images/images.jpeg" alt="Painting 4">
+            <img src="images/images.jpeg" alt="Painting 5">
+        </div>
+    </div>
+
+    <h2>Step-by-Step Process of a Painting</h2>
+    <div class="step-materials-container">
+        <div class="step-row">
+            <div class="step-item">
+                <img src="images/images.jpeg" alt="Step 1">
+                <div class="step-text">
+                    <p>Step 1: Choosing and prepping surface. For this painting I chose... I will let you know when I actually start this</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <img src="images/images.jpeg" alt="Step 2">
+                <div class="step-text">
+                    <p>Step 2: Creating shadow using a light layer of paint thinned down with Gamsol,</p>
+                </div>
+            </div>
+        </div>
+        <div class="step-row">
+            <div class="step-item">
+                <img src="images/images.jpeg" alt="Step 3">
+                <div class="step-text">
+                    <p>Step 3: Adding main color to the painting ...will have some color mixing details in here</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <img src="images/images.jpeg" alt="Step 4">
+                <div class="step-text">
+                    <p>Step 4: Add light and increase shadow more details that describe whatever picture ends up here.</p>
+                </div>
+            </div>
+        </div>
+        <div class="step-row">
+            <div class="step-item">
+                <img src="images/images.jpeg" alt="Step 5">
+                <div class="step-text">
+                    <p>Step 5: add the fine details.</p>
+                </div>
+            </div>
+            <div class="step-item">
+                <img src="images/images.jpeg" alt="Step 6">
+                <div class="step-text">
+                    <p>Step 6: finish painting maybe some glazing info if I do that in this particular painting.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2>Materials Used</h2>
+        <div class="materials-container">
+            <div class="material-category">
+                <h3>Surface</h3>
+                <img src="images/images.jpeg" alt="Surface Material" class="category-image" onclick="togglePopup('surfacePopup')">
+                <div class="popup-caption" id="surfacePopup">Details about the specific surface used for this painting</div>
+            </div>
+
+            <div class="material-category">
+                <h3>Paint</h3>
+                <img src="images/images.jpeg" alt="Paint Material" class="category-image" onclick="togglePopup('paintPopup')">
+                <div class="popup-caption" id="paintPopup">will be a list of the specific paints used in the painting in how to section</div>
+            </div>
+
+            <div class="material-category">
+                <h3>Brushes</h3>
+                <img src="images/images.jpeg" alt="Brushes Material" class="category-image" onclick="togglePopup('brushesPopup')">
+                <div class="popup-caption" id="brushesPopup">List of brushes and sizes used</div>
+            </div>
+
+            <div class="material-category">
+                <h3>Miscellaneous</h3>
+                <img src="images/images.jpeg" alt="Miscellaneous Material" class="category-image" onclick="togglePopup('miscPopup')">
+                <div class="popup-caption" id="miscPopup">Any other materials used that may not fit in above categories</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>My Art</h2>
+    <div class="my-art-container">
+        <div class="link-container">
+            <a href="photography.html">
+                <img src="images/camera.jpeg" alt="Photography">
+                <span class="link-caption">Photography</span>
+            </a>
+            <a href="painting.html">
+                <img src="images/painting.jpeg" alt="Painting">
+                <span class="link-caption">Painting</span>
+            </a>
+            <a href="drawing.html">
+                <img src="images/drawing.png" alt="Drawing">
+                <span class="link-caption">Drawing</span>
+            </a>
+            <a href="digital.html">
+                <img src="images/digital.png" alt="Digital Media">
+                <span class="link-caption">Digital Media</span>
+            </a>
+            <a href="sculpture.html">
+                <img src="images/sculpture.png" alt="Sculpture">
+                <span class="link-caption">Sculpture</span>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <a href="index.html">Home</a>
+        <span>|</span>
+        <a href="contact.html">Contact Me</a>
+        <span>|</span>
+        <a href="https://www.instagram.com/terry.farrar.photography" target="_blank">Instagram</a>
+    </footer>
+
+
+    <script>
+        function togglePopup(popupId) {
+            const popup = document.getElementById(popupId);
+            popup.style.display = (popup.style.display === "block") ? "none" : "block";
+        }
+
+        // Hide popups when clicking outside
+        window.onclick = function(event) {
+            const popups = document.getElementsByClassName("popup-caption");
+            if (!event.target.matches('.category-image')) {
+                for (let i = 0; i < popups.length; i++) {
+                    popups[i].style.display = "none";
+                }
+            }
+        };
+    </script>
+</body>
+</html>

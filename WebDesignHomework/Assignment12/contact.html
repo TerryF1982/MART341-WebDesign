@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Terry Farrar Art & Photography</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+
+    <header class="nav-header">
+        <h1>Terry Farrar Art and Photography</h1>
+    </header>
+
+    <h2 class="section-heading">Contact Me</h2>
+
+    <div class="container">
+        <form class="contact-form" action="submit_contact_form.php" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <h2 class="section-heading">My Art</h2>
+
+    <div class="link-container">
+        <a href="photography.html">
+            <img src="images/camera.jpeg" alt="Photography">
+            <span class="link-caption">Photography</span>
+        </a>
+        <a href="painting.html">
+            <img src="images/painting.jpeg" alt="Painting">
+            <span class="link-caption">Painting</span>
+        </a>
+        <a href="drawing.html">
+            <img src="images/drawing.png" alt="Drawing">
+            <span class="link-caption">Drawing</span>
+        </a>
+        <a href="digital.html">
+            <img src="images/digital.png" alt="Digital Media">
+            <span class="link-caption">Digital Media</span>
+        </a>
+        <a href="sculpture.html">
+            <img src="images/sculpture.png" alt="Sculpture">
+            <span class="link-caption">Sculpture</span>
+        </a>
+    </div>
+
+    <footer>
+        <a href="contact.html">Contact Me</a>
+        <span>|</span>
+        <a href="https://www.instagram.com/terry.farrar.photography" target="_blank">Instagram</a>
+    </footer>
+
+</body>
+</html>
