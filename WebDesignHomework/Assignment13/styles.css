@@ -1,0 +1,164 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-image: url('images/background1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.nav-header {
+    background-color: #555166;
+    color: transparent;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-header h1 {
+    margin: 0;
+    font-size: 3rem;
+    background: linear-gradient(90deg, #f25356, #ffcc00);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 3rem;
+    color: #f25356;
+    text-shadow: 3px 3px 5px #000000;
+    margin: 20px 0;
+}
+
+.video-gallery-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(155, 196, 194, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 1200px;
+}
+
+.video-gallery {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.video-block {
+    margin: 0 10px;
+    flex: 0 0 auto;
+}
+
+.video-block video {
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.video-description {
+    display: block;
+    text-align: center;
+    color: #333;
+    margin-top: 5px;
+}
+
+.building-sculpture-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(155, 196, 194, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 1200px;
+}
+
+.photo-block {
+    margin: 10px;
+    flex: 0 0 150px;
+    position: relative;
+}
+
+.photo-block img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.photo-block img:hover {
+    transform: scale(1.05);
+}
+
+.photo-description {
+    display: block;
+    margin-top: 5px;
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.my-art-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(155, 196, 194, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 1200px;
+}
+
+.link-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: center;
+}
+
+.link-caption {
+    display: block;
+    margin-top: 5px;
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+}
+
+footer {
+    background-color: #555166;
+    color: #f25356;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #f25356;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .video-block, .photo-block {
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .video-block video, .photo-block img {
+        max-width: 100%;
+    }
+}

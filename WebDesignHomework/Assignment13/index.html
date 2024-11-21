@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terry Farrar Art & Photography</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Trebuchet MS', sans-serif;
+            background-image: url('images/background1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .nav-header {
+            background-color: #555166;
+            color: transparent;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Georgia', serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-header h1 {
+            margin: 0;
+            font-size: 3rem;
+            background: linear-gradient(90deg, #f25356, #ffcc00);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .section-heading {
+            text-align: center;
+            font-size: 3rem;
+            color: #f25356;
+            text-shadow: 3px 3px 5px #000000;
+            margin: 20px 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px auto;
+            width: 95%;
+            max-width: 1200px;
+            background-color: rgba(155, 196, 194, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .container img {
+            height: auto;
+            max-height: 300px;
+            border-radius: 8px;
+            width: 25%;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .container img:hover {
+            transform: scale(1.05);
+        }
+
+        .caption-overlay {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #f25356;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 1rem;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            width: calc(100% - 40px);
+        }
+
+        .container img:hover + .caption-overlay {
+            opacity: 1;
+        }
+
+        .placeholder-text {
+            width: 75%;
+            font-size: 1.5rem;
+            padding-left: 20px;
+            color: #333;
+        }
+
+        .container-reversed {
+            flex-direction: row;
+        }
+
+        .link-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px auto;
+            width: 95%;
+            max-width: 1200px;
+            background-color: rgba(155, 196, 194, 0.7);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .link-container a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5rem;
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .link-container a:hover {
+            transform: scale(1.05);
+        }
+
+        .link-container img {
+            max-height: 150px;
+            height: auto;
+            width: auto;
+            border-radius: 8px;
+        }
+
+        .link-caption {
+            display: block;
+            text-align: center;
+            color: #333;
+            margin-top: 5px;
+        }
+
+        footer {
+            background-color: #555166;
+            color: #f25356;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #f25356;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .placeholder-text {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            .container img {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="nav-header">
+        
+        <h1>Terry Farrar Art and Photography</h1>
+    </header>
+
+    <h2 class="section-heading">Introduction</h2>
+
+    <div class="container">
+        <img src="images/me.jpeg" alt="Image of the artist, Terry Farrar" title="Cutthroat trout I caught fly fishing in western MT 2024">
+        <div class="caption-overlay">Cutthroat trout I caught fly fishing in western MT, 2024</div>
+        <div class="placeholder-text">
+            <p>
+                I am a non-traditional student at the <a href="https://www.umt.edu" target="_blank" style="color: #70002e;">University of Montana</a>. I am working toward both bachelor’s degrees in Art as well as another in Media Arts. I am currently a Junior (Fall 2024). I have a passion for the outdoors and spend my free time in the summer fly fishing around western Montana. I was born in Montana and grew up in a small town in central Montana. Despite starting in a small town, I have been around the world twice and have also lived all over the United States, from as far north as Prudhoe Bay, Alaska to the deep south in places like Louisiana and Georgia. Although my life and travels have taken me all over, Montana will always be home to me.
+            </p>
+        </div>
+    </div>
+
+    <h2 class="section-heading">My Story</h2>
+
+    <div class="container container-reversed">
+        <div class="placeholder-text">
+            <p>
+                As a veteran with multiple combat deployments, transitioning to civilian life was a long and difficult journey. After leaving the military, I isolated myself in remote oilfields, avoiding crowds and the expectations of a society I felt disconnected from. Instead of seeking therapy for my PTSD, I buried myself in work and isolation, struggling to forget the things I had seen and done. This approach, while a survival mechanism, left me haunted by my past.
+                Everything changed when I discovered art. Creating art provided a personal and therapeutic outlet. The canvas became a space for expression without the need for justification.
+                Art is not just about creating beauty; it symbolizes survival, reflection, and growth. It helps me reclaim parts of myself lost as a young paratrooper.<span style="color: #ffcc00;"> Pursuing art now, at this stage in my life, feels like the culmination of a long and difficult journey—and one that is far from over.</span>
+            </p>
+        </div>
+        <img src="images/iraq.jpeg" alt="Terry Farrar in Iraq during deployment" title="My first combat tour with the 101st Airborne 2003 during the invasion of Iraq">
+        <div class="caption-overlay">My first combat tour with the 101st Airborne, Iraq, 2003</div>
+    </div>
+
+    <h2 class="section-heading">My Art</h2>
+
+    <div class="link-container">
+        <a href="photography.html">
+            <img src="images/camera.jpeg" alt="Photography">
+            <span class="link-caption">Photography</span>
+        </a>
+        <a href="painting.html">
+            <img src="images/painting.jpeg" alt="Painting">
+            <span class="link-caption">Painting</span>
+        </a>
+        <a href="drawing.html">
+            <img src="images/drawing.png" alt="Drawing">
+            <span class="link-caption">Drawing</span>
+        </a>
+        <a href="digital.html">
+            <img src="images/digital.png" alt="Digital Media">
+            <span class="link-caption">Digital Media</span>
+        </a>
+        <a href="sculpture.html">
+            <img src="images/sculpture.png" alt="Sculpture">
+            <span class="link-caption">Sculpture</span>
+        </a>
+    </div>
+
+    <footer>
+        <a href="contact.html">Contact Me</a>
+        <span>|</span>
+        <a href="https://www.instagram.com/terry.farrar.photography" target="_blank">Instagram</a>
+    </footer>
+
+</body>
+</html>
