@@ -1,0 +1,357 @@
+/* General Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Body: Ensures the footer stays at the bottom */
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-image: url('images/background1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full height */
+}
+
+/* Header Styles */
+.nav-header {
+    background-color: #555166;
+    color: #fff;
+    padding: 20px;
+    font-family: 'Georgia', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.nav-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+    background: linear-gradient(90deg, #f25356, #ffcc00); /* Gradient from red to yellow */
+    -webkit-background-clip: text; /* Applies gradient only to the text */
+    background-clip: text; /* For non-webkit browsers */
+    color: transparent; /* Makes text color transparent so the gradient shows */
+}
+
+/* Navigation Menu Styles */
+nav a {
+    color: #f25356; /* Footer text color for navigation links */
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    background-color: #444;
+    color: #fff;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: absolute;
+    left: 20px;
+}
+
+.dropbtn {
+    background-color: #555166;
+    color: #f25356; /* Footer text color applied to the 'Menu' button */
+    padding: 10px 20px;
+    font-size: 32px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn:hover {
+    background-color: #444;
+}
+
+/* Section Heading */
+.section-heading {
+    text-align: center;
+    font-size: 3rem;
+    color: #f25356;
+    text-shadow: 3px 3px 5px #000000;
+    margin: 20px 0;
+}
+
+/* Container Styles */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto;
+    width: 95%;
+    max-width: 1200px;
+    background-color: rgba(155, 196, 194, 0.7); /* Blue background stays */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.container img {
+    height: auto;
+    max-height: 300px;
+    border-radius: 8px;
+    width: 25%;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.container img:hover {
+    transform: scale(1.05);
+}
+
+.caption-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #f25356;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    width: calc(100% - 40px);
+}
+
+.container img:hover + .caption-overlay {
+    opacity: 1;
+}
+
+.placeholder-text {
+    width: 75%;
+    font-size: 1.5rem;
+    padding-left: 20px;
+    color: #333;
+}
+
+.container-reversed {
+    flex-direction: row;
+}
+
+/* Link Container Styles */
+.link-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px auto;
+    width: 95%;
+    max-width: 1200px;
+    background-color: rgba(155, 196, 194, 0.7); /* Blue background stays */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.link-container a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.5rem;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.link-container a:hover {
+    transform: scale(1.05);
+}
+
+.link-container img {
+    max-height: 150px;
+    height: auto;
+    width: auto;
+    border-radius: 8px;
+}
+
+.link-caption {
+    display: block;
+    text-align: center;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #555166;
+    color: #f25356;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    margin-top: auto; /* Ensures the footer is pushed to the bottom */
+}
+
+/* Footer Links */
+footer a {
+    color: #f25356;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: rgba(155, 196, 194, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    gap: 20px;
+    border: 2px solid #f25356;
+}
+
+.contact-form label {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid #f25356;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f25356;
+    box-shadow: 0 0 8px rgba(242, 83, 86, 0.5);
+    outline: none;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+}
+
+.contact-form button {
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #f25356;
+    border: 2px solid #f25356;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #ffcc00;
+}
+
+/* Art Page Specific Styles */
+#photography, #painting, #drawing, #sculpture {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(155, 196, 194, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    text-align: center;
+}
+
+.media-container {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    position: relative;
+    width: 30%; /* Ensure three videos per row */
+}
+
+.media-container img {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.media-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Styling for iframe (video) inside .container */
+.container iframe {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Hover effects for iframe (videos) */
+.container iframe:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+}
+
+/* Pop-up Caption Styles */
+.popup, .overlay {
+    /* Code for popup and overlay */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .media-container {
+        width: 100%; /* Stack videos vertically on smaller screens */
+    }
+
+    .contact-form {
+        padding: 20px;
+        width: 95%;
+    }
+}
